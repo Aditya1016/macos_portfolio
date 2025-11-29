@@ -17,6 +17,7 @@ const useWindowStore = create(
         win.zIndex = state.nextZIndex++;
         win.data = data ?? win.data;
     }),
+
     closeWindow: (windowKey) => set((state) => {
         if (!state.windows[windowKey]) {
             console.error(`Window key "${windowKey}" does not exist`);
@@ -27,6 +28,7 @@ const useWindowStore = create(
         win.zIndex = INITIAL_Z_INDEX;
         win.data = null;
     }),
+
     focusWindow: (windowKey) => set((state) => {
         if (!state.windows[windowKey]) {
             console.error(`Window key "${windowKey}" does not exist`);
