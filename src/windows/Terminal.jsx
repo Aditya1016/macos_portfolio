@@ -4,12 +4,11 @@ import WindowWrapper from "#hoc/WindowWrapper";
 import { Check, Flag } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const renderStart = performance.now();
-
 const Terminal = () => {
   const [renderTime, setRenderTime] = useState(null);
 
   useEffect(() => {
+    const renderStart = performance.now();
     requestAnimationFrame(() => {
       const end = performance.now();
       const diff = Math.round(end - renderStart);
