@@ -7,9 +7,9 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div>
+      <div className="flex items-center">
         <img src="/images/logo.svg" alt="logo" />
-        <p className="font-bold">Aditya's Portfolio</p>
+        <p className="font-georama font-semibold">Aditya's Portfolio</p>
         <ul>
           {navLinks.map(({ id, name, type }) => (
             <li key={id} onClick={() => openWindow(type)}>
